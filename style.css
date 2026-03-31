@@ -1097,6 +1097,17 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   overflow: hidden;
   background: var(--bg-2);
 }
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+.project-card:hover .project-img {
+  transform: scale(1.04);
+}
 .project-overlay {
   position: absolute; inset: 0;
   background: rgba(6,6,14,0.75);
@@ -1229,6 +1240,160 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
 .book-btn {
   height: 28px; border-radius: 100px;
   background: linear-gradient(90deg, rgba(124,92,252,0.4), rgba(0,212,255,0.3));
+}
+
+/* ---- Finance mockup (TrackExp) ---- */
+.mockup-finance .mock-body { display: flex; flex-direction: column; gap: 10px; }
+.fin-top-stats { display: flex; gap: 6px; }
+.fin-stat-box {
+  flex: 1; border-radius: 6px; padding: 6px 8px;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.fin-stat-box.income  { background: rgba(34,197,94,0.12);  border: 1px solid rgba(34,197,94,0.2); }
+.fin-stat-box.expense { background: rgba(239,68,68,0.10);  border: 1px solid rgba(239,68,68,0.18); }
+.fin-stat-box.savings { background: rgba(124,92,252,0.12); border: 1px solid rgba(124,92,252,0.22); }
+.fin-stat-label { height: 6px; width: 60%; border-radius: 3px; background: rgba(255,255,255,0.12); }
+.fin-stat-val   { height: 10px; width: 80%; border-radius: 3px; background: rgba(255,255,255,0.22); animation: shimmer 3s ease-in-out infinite; }
+.fin-chart-row {
+  display: flex; align-items: flex-end; gap: 5px;
+  height: 52px; padding: 0 2px;
+}
+.fin-bar-wrap { flex: 1; height: 100%; display: flex; align-items: flex-end; }
+.fin-bar {
+  width: 100%; height: var(--h, 60%);
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(to top, rgba(34,197,94,0.6), rgba(34,197,94,0.25));
+  animation: shimmer 3s ease-in-out infinite;
+}
+.fin-bar.exp {
+  background: linear-gradient(to top, rgba(239,68,68,0.55), rgba(239,68,68,0.2));
+  animation-delay: -.7s;
+}
+.fin-budget-bars { display: flex; flex-direction: column; gap: 5px; }
+.fin-budget-row {
+  height: 8px; border-radius: 4px;
+  background: rgba(255,255,255,0.06); overflow: hidden;
+}
+.fin-budget-fill {
+  height: 100%; width: var(--w, 50%);
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(34,197,94,0.7), rgba(0,212,255,0.5));
+  animation: shimmer 3s ease-in-out infinite;
+}
+.fin-budget-fill.warn {
+  background: linear-gradient(90deg, rgba(251,146,60,0.8), rgba(239,68,68,0.6));
+  animation-delay: -.5s;
+}
+
+/* ---- AI Video mockup (NextEdgeAI) ---- */
+.mockup-ai-video .mock-body { display: flex; flex-direction: column; gap: 8px; }
+.aivid-preview {
+  flex: 1; min-height: 70px; border-radius: 8px;
+  background: linear-gradient(135deg, rgba(6,6,14,0.9) 0%, rgba(124,92,252,0.18) 50%, rgba(0,212,255,0.12) 100%);
+  border: 1px solid rgba(124,92,252,0.25);
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.aivid-play-icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(124,92,252,0.5);
+  border: 1px solid rgba(255,255,255,0.25);
+  position: relative;
+}
+.aivid-play-icon::after {
+  content: '';
+  position: absolute; top: 50%; left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid; border-width: 5px 0 5px 9px;
+  border-color: transparent transparent transparent rgba(255,255,255,0.85);
+}
+.aivid-scan-line {
+  position: absolute; top: 0; left: 30%; width: 2px; height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(0,212,255,0.6), transparent);
+  animation: scanMove 2.5s ease-in-out infinite;
+}
+@keyframes scanMove { 0%,100%{ left:15%; opacity:0.4; } 50%{ left:80%; opacity:1; } }
+.aivid-prompt-bar {
+  height: 18px; border-radius: 4px;
+  background: rgba(124,92,252,0.1);
+  border: 1px solid rgba(124,92,252,0.2);
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+.aivid-timeline { display: flex; gap: 4px; }
+.aivid-scene {
+  height: 22px; flex: 1; border-radius: 4px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.aivid-scene.active {
+  background: rgba(124,92,252,0.3);
+  border-color: rgba(124,92,252,0.5);
+  animation: shimmer 2s ease-in-out infinite;
+}
+.aivid-scene.wide { flex: 2; }
+.aivid-controls { display: flex; align-items: center; gap: 6px; }
+.aivid-ctrl-btn {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(124,92,252,0.35);
+  flex-shrink: 0;
+}
+.aivid-ctrl-btn.small { width: 14px; height: 14px; background: rgba(255,255,255,0.1); }
+.aivid-progress {
+  flex: 1; height: 6px; border-radius: 3px;
+  background: rgba(255,255,255,0.08); overflow: hidden;
+}
+.aivid-progress-fill {
+  width: 40%; height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, rgba(124,92,252,0.9), rgba(0,212,255,0.7));
+}
+
+/* ---- Cultural Institute mockup (Anuranan) ---- */
+.mockup-cultural .mock-body { display: flex; flex-direction: column; gap: 8px; }
+.cult-hero {
+  height: 44px; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(234,179,8,0.18), rgba(249,115,22,0.15), rgba(124,92,252,0.12));
+  border: 1px solid rgba(234,179,8,0.2);
+  padding: 8px 10px; display: flex; flex-direction: column; gap: 5px;
+}
+.cult-hero-title { height: 10px; width: 70%; border-radius: 3px; background: rgba(255,255,255,0.25); }
+.cult-hero-sub   { height: 7px;  width: 50%; border-radius: 3px; background: rgba(255,255,255,0.12); }
+.cult-events { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+.cult-event-card {
+  display: flex; align-items: center; gap: 6px;
+  padding: 5px 8px; border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.cult-event-date {
+  width: 22px; height: 22px; border-radius: 4px; flex-shrink: 0;
+  background: rgba(234,179,8,0.3);
+  animation: shimmer 3s ease-in-out infinite;
+}
+.cult-event-date.past { background: rgba(255,255,255,0.1); }
+.cult-event-info { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.cult-event-name { height: 7px; width: 80%; border-radius: 3px; background: rgba(255,255,255,0.18); }
+.cult-event-loc  { height: 6px; width: 55%; border-radius: 3px; background: rgba(255,255,255,0.08); }
+.cult-event-badge {
+  width: 28px; height: 14px; border-radius: 3px; flex-shrink: 0;
+  background: rgba(34,197,94,0.25); border: 1px solid rgba(34,197,94,0.35);
+}
+.cult-event-badge.past { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.12); }
+.cult-admin-bar {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 8px; border-radius: 6px;
+  background: rgba(124,92,252,0.08);
+  border: 1px solid rgba(124,92,252,0.18);
+}
+.cult-admin-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(34,197,94,0.8);
+  box-shadow: 0 0 6px rgba(34,197,94,0.5);
+}
+.cult-admin-label { flex: 1; height: 7px; border-radius: 3px; background: rgba(255,255,255,0.12); }
+.cult-admin-btn {
+  width: 40px; height: 14px; border-radius: 3px;
+  background: rgba(124,92,252,0.35);
+  border: 1px solid rgba(124,92,252,0.4);
 }
 
 @keyframes shimmer {
