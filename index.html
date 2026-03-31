@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="StackLabs – Premium full-stack web development. Custom websites, web applications, admin dashboards & CRM systems that generate leads and grow your business." />
+  <meta name="keywords" content="web development, full stack developer, business website, admin dashboard, booking system, CRM, web application, India" />
+  <title>StackLabs | Premium Full-Stack Web Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Stack<span>Labs</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#packages" class="nav-link">Packages</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#" class="nav-link nav-cta" data-modal="contact">Let's Build →</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        Available for new projects
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-line">We Build Websites</span>
+        <span class="hero-line hero-gradient">That Win Clients</span>
+        <span class="hero-line">&amp; Drive Revenue.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Custom full-stack websites, web applications, and admin dashboards<br class="desktop-break" />
+        engineered to generate leads, automate operations &amp; scale your business.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#packages" class="btn btn-primary">
+          View Packages
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#projects" class="btn btn-ghost">See My Work</a>
+      </div>
+
+
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-bar"><div class="scroll-dot"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== MARQUEE ========== -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-fade marquee-left"></div>
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>React</span><span class="mx">·</span>
+        <span>Node.js</span><span class="mx">·</span>
+        <span>Next.js</span><span class="mx">·</span>
+        <span>TypeScript</span><span class="mx">·</span>
+        <span>PostgreSQL</span><span class="mx">·</span>
+        <span>MongoDB</span><span class="mx">·</span>
+        <span>Express</span><span class="mx">·</span>
+        <span>AWS</span><span class="mx">·</span>
+        <span>Docker</span><span class="mx">·</span>
+        <span>Tailwind CSS</span><span class="mx">·</span>
+        <span>MySQL</span><span class="mx">·</span>
+        <span>Redis</span><span class="mx">·</span>
+        <span>GraphQL</span><span class="mx">·</span>
+        <span>REST APIs</span><span class="mx">·</span>
+      </div>
+      <div class="marquee-inner" aria-hidden="true">
+        <span>React</span><span class="mx">·</span>
+        <span>Node.js</span><span class="mx">·</span>
+        <span>Next.js</span><span class="mx">·</span>
+        <span>TypeScript</span><span class="mx">·</span>
+        <span>PostgreSQL</span><span class="mx">·</span>
+        <span>MongoDB</span><span class="mx">·</span>
+        <span>Express</span><span class="mx">·</span>
+        <span>AWS</span><span class="mx">·</span>
+        <span>Docker</span><span class="mx">·</span>
+        <span>Tailwind CSS</span><span class="mx">·</span>
+        <span>MySQL</span><span class="mx">·</span>
+        <span>Redis</span><span class="mx">·</span>
+        <span>GraphQL</span><span class="mx">·</span>
+        <span>REST APIs</span><span class="mx">·</span>
+      </div>
+    </div>
+    <div class="marquee-fade marquee-right"></div>
+  </div>
+
+  <!-- ========== STATS ========== -->
+  <section class="stats" id="stats">
+    <div class="stats-container">
+      <div class="stat-card reveal-up" style="--d:0ms">
+        <div class="stat-top">
+          <span class="stat-number" data-target="50">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-card reveal-up" style="--d:100ms">
+        <div class="stat-top">
+          <span class="stat-number" data-target="35">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card reveal-up" style="--d:200ms">
+        <div class="stat-top">
+          <span class="stat-number" data-target="4">0</span>
+          <span class="stat-suffix">+</span>
+        </div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card reveal-up" style="--d:300ms">
+        <div class="stat-top">
+          <span class="stat-number" data-target="98">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="section-container about-container">
+      <div class="about-visual reveal-left">
+        <div class="about-img-wrap">
+          <div class="about-img-glow"></div>
+          <div class="about-img-placeholder">
+            <img src="/public/poster.gif" alt="StackLabs poster" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-float-card card-tl">
+            <span class="float-icon">🚀</span>
+            <div>
+              <div class="float-title">Fast Delivery</div>
+              <div class="float-sub">7–30 day turnaround</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="about-content reveal-right">
+        <div class="section-tag">About Us</div>
+        <h2 class="section-title">We Don't Just Build Websites.<br><span class="text-gradient">We Build Business Engines.</span></h2>
+        <p class="about-text">We're a senior full-stack development team specialising in business-critical web solutions. We help businesses capture more leads, automate their workflows, and sell online — through custom-built, high-performance web applications.</p>
+        <p class="about-text">Unlike generic freelancers, we bring a <strong>product mindset</strong> to every project. Your website isn't a digital brochure — it's a 24/7 sales and operations engine.</p>
+
+        <div class="skills-list">
+          <div class="skill-item reveal-up" style="--d:0ms">
+            <div class="skill-head"><span>Full-Stack Development</span><span>95%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="95"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:80ms">
+            <div class="skill-head"><span>Database Architecture</span><span>90%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="90"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:160ms">
+            <div class="skill-head"><span>UI / UX Design</span><span>85%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="85"></div></div>
+          </div>
+          <div class="skill-item reveal-up" style="--d:240ms">
+            <div class="skill-head"><span>API Integration</span><span>92%</span></div>
+            <div class="skill-track"><div class="skill-bar" data-w="92"></div></div>
+          </div>
+        </div>
+
+          <a href="#" class="btn btn-primary reveal-up" style="--d:320ms" data-modal="contact">
+          Work With Me
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">What We Build</div>
+        <h2 class="section-title">Services That <span class="text-gradient">Scale Your Business</span></h2>
+        <p class="section-subtitle">From simple lead-gen websites to complex full-stack applications — we build digital systems that work for your business around the clock.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal-up" style="--d:0ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Business Websites</h3>
+          <p>Professional, conversion-optimised websites that turn visitors into paying customers with clear CTAs and compelling design.</p>
+          <div class="service-tags"><span>Lead Gen</span><span>SEO Ready</span><span>Mobile First</span></div>
+        </div>
+
+        <div class="service-card reveal-up" style="--d:80ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Web Applications</h3>
+          <p>Custom web apps with full backend, user authentication, role management, and real-time functionality.</p>
+          <div class="service-tags"><span>Full Stack</span><span>Scalable</span><span>Secure</span></div>
+        </div>
+
+        <div class="service-card reveal-up" style="--d:160ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <h3>Admin Dashboards</h3>
+          <p>Powerful control panels to manage customers, orders, leads, and data — all in one clean interface.</p>
+          <div class="service-tags"><span>Analytics</span><span>Role-Based</span><span>Reports</span></div>
+        </div>
+
+        <div class="service-card reveal-up" style="--d:240ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 16l2 2 4-4"/></svg>
+          </div>
+          <h3>Booking Systems</h3>
+          <p>Online appointment platforms that reduce no-shows and fully automate your scheduling &amp; reminders.</p>
+          <div class="service-tags"><span>Auto-Confirm</span><span>Reminders</span><span>Calendar</span></div>
+        </div>
+
+        <div class="service-card reveal-up" style="--d:320ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>CRM &amp; Lead Management</h3>
+          <p>Custom CRM systems to track prospects, manage follow-ups, and never let a hot lead go cold.</p>
+          <div class="service-tags"><span>Pipeline</span><span>Email Alerts</span><span>Reports</span></div>
+        </div>
+
+        <div class="service-card reveal-up" style="--d:400ms">
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>E-Commerce &amp; Payments</h3>
+          <p>Online stores and order systems with product management, tracking, and Razorpay / Stripe integration.</p>
+          <div class="service-tags"><span>Razorpay</span><span>Stripe</span><span>Auto Invoice</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROCESS ========== -->
+  <section class="process" id="process">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">How We Work</div>
+        <h2 class="section-title">A Process Built for <span class="text-gradient">Zero Surprises</span></h2>
+        <p class="section-subtitle">Every project follows this proven 10-step delivery workflow — designed to minimise revisions and maximise results.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal-up" style="--d:0ms">
+          <div class="step-num">01</div>
+          <h3>Requirement Gathering</h3>
+          <p>Deep-dive consultation to understand your business, goals, and technical needs.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:60ms">
+          <div class="step-num">02</div>
+          <h3>Wireframe &amp; Structure</h3>
+          <p>Site maps and wireframes created for your approval before design begins.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:120ms">
+          <div class="step-num">03</div>
+          <h3>UI Design</h3>
+          <p>High-fidelity mockups tailored to your brand and market expectations.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:180ms">
+          <div class="step-num">04</div>
+          <h3>Frontend Development</h3>
+          <p>Pixel-perfect, responsive implementation with smooth animations.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:240ms">
+          <div class="step-num">05</div>
+          <h3>Backend &amp; Database</h3>
+          <p>Secure API development, database architecture, and service integration.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:300ms">
+          <div class="step-num">06</div>
+          <h3>Testing</h3>
+          <p>Comprehensive testing across devices, browsers, and every user flow.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:360ms">
+          <div class="step-num">07</div>
+          <h3>Client Review</h3>
+          <p>You review the complete build and request final adjustments before go-live.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:420ms">
+          <div class="step-num">08</div>
+          <h3>Deployment</h3>
+          <p>Secure launch with SSL, CDN, and performance optimisation configured.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:480ms">
+          <div class="step-num">09</div>
+          <h3>Handover</h3>
+          <p>Full documentation, credentials, and walkthrough so you're in complete control.</p>
+        </div>
+        <div class="process-step reveal-up" style="--d:540ms">
+          <div class="step-num">10</div>
+          <h3>Maintenance</h3>
+          <p>Optional monthly plans to keep your site secure and continuously improving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PACKAGES ========== -->
+  <section class="packages" id="packages">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Pricing</div>
+        <h2 class="section-title">Transparent Packages. <span class="text-gradient">No Hidden Costs.</span></h2>
+        <p class="section-subtitle">Fixed-price packages designed for businesses ready to grow. Know exactly what you're getting before you invest.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Starter -->
+        <div class="pkg-card reveal-up" style="--d:0ms">
+          <div class="pkg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+          </div>
+          <div class="pkg-name">Starter</div>
+          <div class="pkg-sub">Business Website</div>
+          <div class="pkg-price"><span class="p-cur">₹</span><span class="p-amt">10,000</span><span class="p-range">– ₹15,000</span></div>
+          <div class="pkg-for">Best for small businesses, shops &amp; professionals</div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>4–6 Pages</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Mobile Responsive</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Contact Form</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp Button</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Google Maps Embed</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Basic SEO Setup</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Deployment Included</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>7 Days Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="pkg-card pkg-featured reveal-up" style="--d:150ms">
+          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="pkg-name">Growth</div>
+          <div class="pkg-sub">Website + Database</div>
+          <div class="pkg-price"><span class="p-cur">₹</span><span class="p-amt">25,000</span><span class="p-range">– ₹50,000</span></div>
+          <div class="pkg-for">Best for businesses needing leads &amp; data management</div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>6–12 Pages</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Database Integration</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Admin Login Panel</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Lead Dashboard</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Inquiry Management</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Email Notifications</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Role-Based Access</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>15 Days Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pkg-card reveal-up" style="--d:300ms">
+          <div class="pkg-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          </div>
+          <div class="pkg-name">Enterprise</div>
+          <div class="pkg-sub">Business Web App</div>
+          <div class="pkg-price"><span class="p-cur">₹</span><span class="p-amt">70,000</span><span class="p-range">– ₹1,50,000+</span></div>
+          <div class="pkg-for">Best for startups, MVPs &amp; internal business tools</div>
+          <ul class="pkg-features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Full Custom Backend</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Frontend + API Backend</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Database Schema Design</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Multi-Role User System</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Analytics Dashboard</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>3rd Party API Integrations</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Full Testing Suite</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>30 Days Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+        </div>
+      </div>
+
+      <!-- Add-ons -->
+      <div class="addons-wrap reveal-up">
+        <h3 class="addons-heading">Popular Add-Ons</h3>
+        <div class="addons-grid">
+          <div class="addon-item"><span class="addon-name">Extra Page</span><span class="addon-price">₹1,500 – ₹4,000</span></div>
+          <div class="addon-item"><span class="addon-name">Blog Setup</span><span class="addon-price">₹5,000 – ₹12,000</span></div>
+          <div class="addon-item"><span class="addon-name">SEO Setup</span><span class="addon-price">₹7,000 – ₹20,000</span></div>
+          <div class="addon-item"><span class="addon-name">Payment Gateway</span><span class="addon-price">₹8,000 – ₹25,000</span></div>
+          <div class="addon-item"><span class="addon-name">Admin Dashboard</span><span class="addon-price">₹15,000 – ₹50,000</span></div>
+          <div class="addon-item"><span class="addon-name">WhatsApp Automation</span><span class="addon-price">₹5,000 – ₹15,000</span></div>
+          <div class="addon-item"><span class="addon-name">Hosting Setup</span><span class="addon-price">₹3,000 – ₹10,000</span></div>
+          <div class="addon-item"><span class="addon-name">Annual Maintenance</span><span class="addon-price">10–20% of project</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects" id="projects">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Projects</div>
+        <h2 class="section-title">Built to Perform. <span class="text-gradient">Built to Convert.</span></h2>
+        <p class="section-subtitle">A selection of recent projects spanning business websites, web applications, and custom dashboards.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal-up" style="--d:0ms">
+          <div class="project-visual">
+            <div class="proj-mockup mockup-website">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-body">
+                <div class="mock-hero-block"></div>
+                <div class="mock-cols">
+                  <div class="mock-col"></div><div class="mock-col"></div><div class="mock-col"></div>
+                </div>
+                <div class="mock-lines">
+                  <div class="mock-line w80"></div>
+                  <div class="mock-line w60"></div>
+                  <div class="mock-line w70"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="#contact" class="proj-link-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="proj-tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span></div>
+            <h3>Business Lead Generation Website</h3>
+            <p>Conversion-optimised website for a local service business with integrated lead capture and admin dashboard for managing inquiries.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal-up" style="--d:150ms">
+          <div class="project-visual">
+            <div class="proj-mockup mockup-dashboard">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-body dash-body">
+                <div class="dash-sidebar">
+                  <div class="dash-nav-item"></div>
+                  <div class="dash-nav-item"></div>
+                  <div class="dash-nav-item active"></div>
+                  <div class="dash-nav-item"></div>
+                </div>
+                <div class="dash-main">
+                  <div class="dash-stats">
+                    <div class="dash-stat-box"></div>
+                    <div class="dash-stat-box"></div>
+                    <div class="dash-stat-box"></div>
+                  </div>
+                  <div class="dash-chart"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="#contact" class="proj-link-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="proj-tags"><span>Next.js</span><span>MongoDB</span><span>Chart.js</span></div>
+            <h3>Admin Dashboard &amp; CRM System</h3>
+            <p>Full-featured admin panel with lead pipeline, team management, analytics reports, and automated email notifications.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal-up" style="--d:300ms">
+          <div class="project-visual">
+            <div class="proj-mockup mockup-booking">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-body">
+                <div class="book-cal">
+                  <div class="book-cal-head"></div>
+                  <div class="book-cal-grid">
+                    <div class="cal-cell active"></div><div class="cal-cell"></div>
+                    <div class="cal-cell active"></div><div class="cal-cell"></div>
+                    <div class="cal-cell active"></div><div class="cal-cell"></div>
+                  </div>
+                </div>
+                <div class="book-form">
+                  <div class="book-field"></div>
+                  <div class="book-field"></div>
+                  <div class="book-btn"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-overlay">
+              <a href="#contact" class="proj-link-btn">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="proj-tags"><span>React</span><span>Express</span><span>MySQL</span></div>
+            <h3>Online Booking &amp; Appointment System</h3>
+            <p>Smart booking platform for a wellness clinic with automated confirmations, SMS reminders, and a staff management backend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Testimonials</div>
+        <h2 class="section-title">Clients Who <span class="text-gradient">Trust The Work</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal-up" style="--d:0ms">
+          <div class="testi-stars">★★★★★</div>
+          <p>"We got 3× more inquiries within the first month. The admin dashboard makes managing leads so much easier than before. Best investment we made."</p>
+          <div class="testi-author">
+            <div class="author-av">RK</div>
+            <div><div class="author-name">Rajesh Kumar</div><div class="author-role">Owner, Sharma Dental Clinic</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal-up" style="--d:150ms">
+          <div class="testi-stars">★★★★★</div>
+          <p>"The booking system completely automated our appointment process. No more phone tag with clients. Our staff saves 3+ hours every single day."</p>
+          <div class="testi-author">
+            <div class="author-av">PS</div>
+            <div><div class="author-name">Priya Sharma</div><div class="author-role">Director, FitLife Wellness</div></div>
+          </div>
+        </div>
+        <div class="testi-card reveal-up" style="--d:300ms">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Professional, fast, and incredibly communicative. The web app exceeded our expectations and was delivered ahead of schedule. Highly recommend."</p>
+          <div class="testi-author">
+            <div class="author-av">AM</div>
+            <div><div class="author-name">Amit Malhotra</div><div class="author-role">Founder, QuickOrder Platform</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MAINTENANCE ========== -->
+  <section class="maintenance" id="maintenance">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <div class="section-tag">Monthly Plans</div>
+        <h2 class="section-title">Keep It Running. <span class="text-gradient">Keep It Growing.</span></h2>
+        <p class="section-subtitle">Your website is a living business asset. Our maintenance plans keep it secure, updated, and continuously improving.</p>
+      </div>
+      <div class="maint-grid">
+        <div class="maint-card reveal-up" style="--d:0ms">
+          <div class="maint-name">Basic</div>
+          <div class="maint-price">₹2,000 <span>– ₹3,000<small>/mo</small></span></div>
+          <ul class="maint-list">
+            <li>Regular Backups</li>
+            <li>Security Monitoring</li>
+            <li>Minor Text Edits</li>
+            <li>Uptime Monitoring</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Choose Plan</a>
+        </div>
+        <div class="maint-card maint-featured reveal-up" style="--d:150ms">
+          <div class="maint-badge">Recommended</div>
+          <div class="maint-name">Standard</div>
+          <div class="maint-price">₹5,000 <span>– ₹8,000<small>/mo</small></span></div>
+          <ul class="maint-list">
+            <li>Everything in Basic</li>
+            <li>Content Updates</li>
+            <li>Bug Fixes</li>
+            <li>Small Feature Changes</li>
+            <li>Priority Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Choose Plan</a>
+        </div>
+        <div class="maint-card reveal-up" style="--d:300ms">
+          <div class="maint-name">Premium</div>
+          <div class="maint-price">₹15,000+ <span><small>/mo</small></span></div>
+          <ul class="maint-list">
+            <li>Ongoing Development</li>
+            <li>Feature Improvements</li>
+            <li>Performance Optimization</li>
+            <li>Priority 24/7 Support</li>
+            <li>Monthly Reports</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-full">Choose Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-section">
+    <div class="cta-orb cta-orb-l"></div>
+    <div class="cta-orb cta-orb-r"></div>
+    <div class="cta-inner reveal-up">
+      <div class="section-tag">Start Today</div>
+      <h2 class="cta-title">Ready to Build Your<br><span class="text-gradient">Business Engine?</span></h2>
+      <p class="cta-sub">Get a professional website with database integration and admin panel <strong>starting at ₹14,999.</strong></p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn btn-primary btn-lg">
+          Start Your Project
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/919999999999" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact" id="contact">
+    <div class="section-container contact-container">
+      <div class="contact-info reveal-left">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Let's Build <span class="text-gradient">Something Great.</span></h2>
+        <p class="contact-desc">Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.</p>
+        <div class="contact-items">
+          <a href="https://wa.me/919999999999" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+            </div>
+            <div><div class="ci-label">WhatsApp</div><div class="ci-value">+91 99999 99999</div></div>
+          </a>
+          <a href="mailto:hello@stacklabs.dev" class="contact-item">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div><div class="ci-label">Email</div><div class="ci-value">hello@stacklabs.dev</div></div>
+          </a>
+          <div class="contact-item">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div><div class="ci-label">Response Time</div><div class="ci-value">Within 24 hours</div></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Your Name *</label>
+            <input type="text" id="fname" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="fphone">Phone / WhatsApp *</label>
+            <input type="tel" id="fphone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">Email Address *</label>
+          <input type="email" id="femail" name="email" placeholder="your@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="fservice">Service Interested In</label>
+          <select id="fservice" name="service">
+            <option value="">Select a service...</option>
+            <option value="starter">Starter Website (₹10k–₹15k)</option>
+            <option value="growth">Growth Website + Database (₹25k–₹50k)</option>
+            <option value="enterprise">Enterprise Web App (₹70k–₹1.5L)</option>
+            <option value="maintenance">Monthly Maintenance Plan</option>
+            <option value="addon">Add-On Services</option>
+            <option value="custom">Custom / Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Tell Me About Your Project</label>
+          <textarea id="fmessage" name="message" rows="4" placeholder="Describe your business, what you need built, and any specific requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <svg class="btn-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="btn-dots" hidden>
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+        <div class="form-success" id="formSuccess" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Message sent! We'll be in touch within 24 hours.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">Stack<span>Labs</span></a>
+          <p>Building digital businesses that generate leads, automate operations, and scale growth.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://wa.me/919999999999" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <div class="fc-title">Services</div>
+            <ul>
+              <li><a href="#services">Business Websites</a></li>
+              <li><a href="#services">Web Applications</a></li>
+              <li><a href="#services">Admin Dashboards</a></li>
+              <li><a href="#services">Booking Systems</a></li>
+              <li><a href="#services">CRM Systems</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="fc-title">Packages</div>
+            <ul>
+              <li><a href="#packages">Starter (₹10k–₹15k)</a></li>
+              <li><a href="#packages">Growth (₹25k–₹50k)</a></li>
+              <li><a href="#packages">Enterprise (₹70k+)</a></li>
+              <li><a href="#maintenance">Monthly Plans</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="fc-title">Company</div>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#process">Process</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 StackLabs. All rights reserved.</span>
+        <span>Built for businesses that mean business.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919999999999" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-tip">Chat with me!</span>
+  </a>
+
+  <!-- ========== CONTACT MODAL ========== -->
+  <div class="contact-modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-label="Contact Us">
+    <div class="contact-modal">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-header">
+        <h3>Let's Build <span class="text-gradient">Something Great.</span></h3>
+        <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+      </div>
+      <form class="contact-form" id="modalContactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="mfname">Your Name *</label>
+            <input type="text" id="mfname" name="name" placeholder="John Doe" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="mfphone">Phone / WhatsApp *</label>
+            <input type="tel" id="mfphone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mfemail">Email Address *</label>
+          <input type="email" id="mfemail" name="email" placeholder="your@email.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="mfservice">Service Interested In</label>
+          <select id="mfservice" name="service">
+            <option value="">Select a service...</option>
+            <option value="starter">Starter Website (₹10k–₹15k)</option>
+            <option value="growth">Growth Website + Database (₹25k–₹50k)</option>
+            <option value="enterprise">Enterprise Web App (₹70k–₹1.5L)</option>
+            <option value="maintenance">Monthly Maintenance Plan</option>
+            <option value="addon">Add-On Services</option>
+            <option value="custom">Custom / Not Sure Yet</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mfmessage">Tell Us About Your Project</label>
+          <textarea id="mfmessage" name="message" rows="2" placeholder="Describe your business, what you need built, and any specific requirements..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="mSubmitBtn">
+          <span class="btn-text">Send Message</span>
+          <svg class="btn-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div class="btn-dots" hidden>
+            <span></span><span></span><span></span>
+          </div>
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
