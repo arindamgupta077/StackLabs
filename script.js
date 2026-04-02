@@ -553,7 +553,11 @@
     trigger.addEventListener('click', e => e.preventDefault());
   });
 
-  function openContactModal() {
+  function openContactModal(serviceValue) {
+    if (serviceValue) {
+      const sel = document.getElementById('mfservice');
+      if (sel) sel.value = serviceValue;
+    }
     contactModal.classList.add('open');
     document.body.style.overflow = 'hidden';
     setTimeout(() => {
@@ -568,7 +572,10 @@
   }
 
   modalTriggers.forEach(btn => {
-    btn.addEventListener('click', e => { e.preventDefault(); openContactModal(); });
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      openContactModal(btn.dataset.service || '');
+    });
   });
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeContactModal);
