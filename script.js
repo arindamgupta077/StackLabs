@@ -518,7 +518,16 @@
       btnDots.hidden       = false;
       submitBtn.disabled   = true;
 
-      setTimeout(() => {
+      const serviceEl = form.querySelector('[name="service"]');
+      const messageEl = form.querySelector('[name="message"]');
+
+      emailjs.send('service_hmac2ke', 'template_fh1brii', {
+        from_name:  name.value.trim(),
+        from_phone: phone.value.trim(),
+        from_email: email.value.trim(),
+        service:    serviceEl ? serviceEl.value : '',
+        message:    messageEl ? messageEl.value.trim() : ''
+      }).then(function () {
         btnText.textContent  = 'Send Message';
         btnArr.style.display = '';
         btnDots.hidden       = true;
@@ -527,7 +536,13 @@
         successMsg.hidden = false;
         successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         setTimeout(() => { successMsg.hidden = true; }, 6000);
-      }, 1800);
+      }).catch(function () {
+        btnText.textContent  = 'Send Message';
+        btnArr.style.display = '';
+        btnDots.hidden       = true;
+        submitBtn.disabled   = false;
+        alert('Failed to send message. Please try again or contact us directly.');
+      });
     });
 
     form.querySelectorAll('input, textarea').forEach(inp => {
