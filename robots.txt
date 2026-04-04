@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block access to any private or system paths
+Disallow: /.netlify/
+
+# Sitemap location
+Sitemap: https://stacklabs.in/sitemap.xml
+
+# Crawl delay (optional — helps avoid overload)
+Crawl-delay: 1
