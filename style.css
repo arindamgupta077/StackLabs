@@ -401,7 +401,8 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   padding: clamp(48px, 7vh, 88px) 24px clamp(32px, 4vh, 56px);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 0;
 }
 
@@ -444,8 +445,16 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   line-height: 1.0;
   letter-spacing: -.04em;
   margin-bottom: clamp(14px, 2.5vh, 28px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.hero-line { display: block; }
+.hero-line {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
 .hero-gradient {
   background: var(--grad-text);
   -webkit-background-clip: text;
@@ -458,6 +467,8 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   color: var(--text-2);
   line-height: 1.65;
   max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: clamp(18px, 3vh, 36px);
 }
 .desktop-break { display: none; }
@@ -466,6 +477,7 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: clamp(18px, 3vh, 40px);
 }
 
