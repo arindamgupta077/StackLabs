@@ -5,7 +5,7 @@ Allow: /
 Disallow: /.netlify/
 
 # Sitemap location
-Sitemap: https://stacklabs.in/sitemap.xml
+Sitemap: https://www.scalvitech.in/sitemap.xml
 
 # Crawl delay (optional — helps avoid overload)
 Crawl-delay: 1

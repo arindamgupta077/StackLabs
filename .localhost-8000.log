@@ -671,3 +671,6 @@
  HTTP  25/4/2026 11:08:12 pm 192.168.31.24 Returned 200 in 1 ms
  HTTP  25/4/2026 11:08:14 pm 192.168.31.24 GET /public/YourGPT.png
  HTTP  25/4/2026 11:08:14 pm 192.168.31.24 Returned 200 in 2 ms
+
+ INFO  Gracefully shutting down. Please wait...
+Terminate batch job (Y/N)? 

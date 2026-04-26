@@ -3,18 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <script>
+    (function () {
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+
+      var navEntries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+      var navEntry = navEntries && navEntries.length ? navEntries[0] : null;
+      var isReload = navEntry
+        ? navEntry.type === 'reload'
+        : performance.navigation && performance.navigation.type === 1;
+
+      if (!isReload) return;
+
+      function scrollToTop() {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        if (document.body) document.body.scrollTop = 0;
+      }
+
+      scrollToTop();
+      window.addEventListener('DOMContentLoaded', scrollToTop, { once: true });
+      window.addEventListener('load', function () {
+        scrollToTop();
+        requestAnimationFrame(scrollToTop);
+      }, { once: true });
+    })();
+  </script>
 
   <!-- ===== PRIMARY SEO META TAGS ===== -->
-  <title>StackLabs | Software & Website Developer India — Web Apps, Automation Tools & Gen AI Solutions</title>
-  <meta name="description" content="StackLabs is a professional software & website developer in India. We build custom websites, web applications, business software, custom automation tools & Gen AI solutions that generate leads and grow your business. Starting at ₹10,000." />
-  <meta name="keywords" content="website developer, website developer India, web developer India, hire website developer, professional website developer, website development company India, custom website development, full stack developer India, web development company, website designer developer, freelance web developer India, website developer near me, business website developer, web application developer India, affordable website developer India, best website developer India, website developer for small business, StackLabs, web developer, website design and development, React developer India, Node.js developer India, software developer India, software development company India, hire software developer India, custom software development India, business application developer India, business software development, web app development company India, web application development India, SaaS developer India, enterprise software developer India, startup software developer India, MVP developer India, mobile web app developer, progressive web app developer India, software engineer India, IT company India, software solution provider India, application developer India, custom web application development, online business software, business automation software India, CRM software developer India, ERP developer India, admin panel developer India, dashboard developer India, booking system developer India, ecommerce developer India, React developer India, Node.js developer India, Next.js developer India, full stack web developer India, MERN stack developer India, backend developer India, API developer India, database developer India, cloud application developer India, affordable software developer India, best software developer India, automation tools developer India, custom automation tools India, Gen AI solutions India, generative AI developer India, AI solutions India, LLM developer India, GPT developer India, AI chatbot developer India, AI application development India, workflow automation India, business process automation India, AI integration India" />
+  <title>ScalviTech | Software & Website Developer India — Web Apps, Automation Tools & Gen AI Solutions</title>
+  <meta name="description" content="ScalviTech is a professional software & website developer in India. We build custom websites, web applications, business software, custom automation tools & Gen AI solutions that generate leads and grow your business. Starting at ₹10,000." />
+  <meta name="keywords" content="website developer, website developer India, web developer India, hire website developer, professional website developer, website development company India, custom website development, full stack developer India, web development company, website designer developer, freelance web developer India, website developer near me, business website developer, web application developer India, affordable website developer India, best website developer India, website developer for small business, ScalviTech, web developer, website design and development, React developer India, Node.js developer India, software developer India, software development company India, hire software developer India, custom software development India, business application developer India, business software development, web app development company India, web application development India, SaaS developer India, enterprise software developer India, startup software developer India, MVP developer India, mobile web app developer, progressive web app developer India, software engineer India, IT company India, software solution provider India, application developer India, custom web application development, online business software, business automation software India, CRM software developer India, ERP developer India, admin panel developer India, dashboard developer India, booking system developer India, ecommerce developer India, React developer India, Node.js developer India, Next.js developer India, full stack web developer India, MERN stack developer India, backend developer India, API developer India, database developer India, cloud application developer India, affordable software developer India, best software developer India, automation tools developer India, custom automation tools India, Gen AI solutions India, generative AI developer India, AI solutions India, LLM developer India, GPT developer India, AI chatbot developer India, AI application development India, workflow automation India, business process automation India, AI integration India" />
   <meta name="category" content="Software Development, Web Development, Business Applications" />
   <meta name="classification" content="Business/Technology" />
   <meta name="subject" content="Software Development, Website Development, Web Application Development, Business Application Development" />
-  <meta name="author" content="StackLabs" />
+  <meta name="author" content="ScalviTech" />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
   <meta name="googlebot" content="index, follow" />
-  <link rel="canonical" href="https://stacklabs.in/" />
+  <link rel="canonical" href="https://www.scalvitech.in/" />
 
   <!-- ===== GEO & LANGUAGE ===== -->
   <meta name="geo.region" content="IN" />
@@ -25,22 +53,22 @@
 
   <!-- ===== OPEN GRAPH (Facebook / LinkedIn / WhatsApp) ===== -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="StackLabs" />
-  <meta property="og:title" content="StackLabs | Software & Website Developer India — Web Apps, Automation Tools & Gen AI Solutions" />
+  <meta property="og:site_name" content="ScalviTech" />
+  <meta property="og:title" content="ScalviTech | Software & Website Developer India — Web Apps, Automation Tools & Gen AI Solutions" />
   <meta property="og:description" content="Professional software & website developer in India. Custom websites, web applications, custom automation tools & Gen AI solutions starting at ₹10,000." />
-  <meta property="og:url" content="https://stacklabs.in/" />
-  <meta property="og:image" content="https://stacklabs.in/public/logo.png" />
-  <meta property="og:image:alt" content="StackLabs — Website Developer India" />
+  <meta property="og:url" content="https://www.scalvitech.in/" />
+  <meta property="og:image" content="https://www.scalvitech.in/public/logo.png" />
+  <meta property="og:image:alt" content="ScalviTech — Website Developer India" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_IN" />
 
   <!-- ===== TWITTER CARD ===== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="StackLabs | Software & Website Developer India" />
+  <meta name="twitter:title" content="ScalviTech | Software & Website Developer India" />
   <meta name="twitter:description" content="Professional software & website developer in India. Custom websites, web apps, business applications & admin dashboards starting at ₹10,000." />
-  <meta name="twitter:image" content="https://stacklabs.in/public/logo.png" />
-  <meta name="twitter:image:alt" content="StackLabs Website Developer" />
+  <meta name="twitter:image" content="https://www.scalvitech.in/public/logo.png" />
+  <meta name="twitter:image:alt" content="ScalviTech Website Developer" />
 
   <!-- ===== THEME & APP ===== -->
   <meta name="theme-color" content="#7c5cfc" />
@@ -68,7 +96,7 @@
   <!-- ========== NAVIGATION ========== -->
   <nav class="nav" id="nav">
     <div class="nav-container">
-      <a href="#home" class="nav-logo" style="display:flex;align-items:center;gap:8px"><img src="/public/logo.png" alt="StackLabs Logo" class="nav-logo-img" width="52" height="52" style="width:52px;height:52px;max-width:52px;flex-shrink:0;border-radius:50%;object-fit:contain" /><span class="nav-logo-text">Stack<span class="nav-logo-accent">Labs</span></span></a>
+      <a href="#home" class="nav-logo" style="display:flex;align-items:center;gap:8px"><img src="/public/logo.png" alt="ScalviTech Logo" class="nav-logo-img" width="52" height="52" style="width:52px;height:52px;max-width:52px;flex-shrink:0;border-radius:50%;object-fit:contain" /><span class="nav-logo-text">Scalvi<span class="nav-logo-accent">Tech</span></span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
@@ -310,7 +338,7 @@
         <div class="about-img-wrap">
           <div class="about-img-glow"></div>
           <div class="about-img-placeholder">
-            <img src="/public/poster.gif" alt="StackLabs poster" loading="lazy" decoding="async" />
+            <img src="/public/poster.gif" alt="ScalviTech poster" loading="lazy" decoding="async" />
           </div>
           <div class="about-float-card card-tl">
             <span class="float-icon">🚀</span>
@@ -325,9 +353,9 @@
 
       <div class="about-content reveal-right">
         <div class="section-tag">About Us</div>
-        <h2 class="section-title">We Don't Just Build Websites.<br><span class="text-gradient">We Build Business Engines.</span></h2>
-        <p class="about-text">We're a senior full-stack development team specialising in business-critical web solutions, custom automation tools, and generative AI applications. We help businesses capture more leads, automate their workflows, and sell online — through custom-built, high-performance web applications and intelligent AI-powered systems.</p>
-        <p class="about-text">Unlike generic freelancers, we bring a <strong>product mindset</strong> to every project. Your website isn't a digital brochure — it's a 24/7 sales and operations engine.</p>
+            <h2 class="section-title">We Don’t Just Build Solutions.<br><span class="text-gradient">We Build Business Engines.</span></h2>
+            <p class="about-text">We’re a senior full-stack development team building business-critical systems, custom automation platforms, AI agents, and generative AI solutions. We help businesses generate more leads, streamline operations, and scale revenue with high-performance, tailor-made digital systems.</p>
+            <p class="about-text">We don’t think like freelancers — we think like product builders. Every solution we create is designed to function as a 24/7 sales and operations engine that drives real business outcomes.</p>
 
         <div class="skills-list">
           <div class="skill-item reveal-up" style="--d:0ms">
@@ -898,11 +926,11 @@
             </div>
             <div><div class="ci-label">WhatsApp</div><div class="ci-value">+91 87776 56279</div></div>
           </a>
-          <a href="mailto:stacklabsofficial@gmail.com" class="contact-item">
+          <a href="mailto:contact@scalvitech.in" class="contact-item">
             <div class="ci-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <div><div class="ci-label">Email</div><div class="ci-value">stacklabsofficial@gmail.com</div></div>
+            <div><div class="ci-label">Email</div><div class="ci-value">contact@scalvitech.in</div></div>
           </a>
           <div class="contact-item">
             <div class="ci-icon">
@@ -967,7 +995,7 @@
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="#home" class="nav-logo" style="display:flex;align-items:center;gap:8px"><img src="/public/logo.png" alt="StackLabs Logo" class="nav-logo-img" width="52" height="52" style="width:52px;height:52px;max-width:52px;flex-shrink:0;border-radius:50%;object-fit:contain" /><span class="nav-logo-text" style="color:#ffffff;letter-spacing:-.02em">Stack<span class="nav-logo-accent" style="color:#7c5cfc">Labs</span></span></a>
+          <a href="#home" class="nav-logo" style="display:flex;align-items:center;gap:8px"><img src="/public/logo.png" alt="ScalviTech Logo" class="nav-logo-img" width="52" height="52" style="width:52px;height:52px;max-width:52px;flex-shrink:0;border-radius:50%;object-fit:contain" /><span class="nav-logo-text" style="color:#ffffff;letter-spacing:-.02em">Scalvi<span class="nav-logo-accent" style="color:#7c5cfc">Tech</span></span></a>
           <p>Building digital businesses that generate leads, automate operations, and scale growth.</p>
           <div class="footer-socials">
             <a href="https://www.linkedin.com/in/arindam-gupta-462240125/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
@@ -1013,7 +1041,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 StackLabs. All rights reserved.</span>
+        <span>© 2026 ScalviTech. All rights reserved.</span>
         <span>Built for businesses that mean business.</span>
       </div>
     </div>
@@ -1098,17 +1126,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://stacklabs.in/#organization",
-    "name": "StackLabs",
-    "url": "https://stacklabs.in",
+    "@id": "https://www.scalvitech.in/#organization",
+    "name": "ScalviTech",
+    "url": "https://www.scalvitech.in",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://stacklabs.in/public/logo.png",
+      "url": "https://www.scalvitech.in/public/logo.png",
       "width": 512,
       "height": 512
     },
-    "description": "StackLabs is a professional website developer and full-stack web development company in India. We build custom websites, web applications, admin dashboards, booking systems, and CRM systems.",
-    "email": "stacklabsofficial@gmail.com",
+    "description": "ScalviTech is a professional website developer and full-stack web development company in India. We build custom websites, web applications, admin dashboards, booking systems, and CRM systems.",
+    "email": "contact@scalvitech.in",
     "telephone": "+918777656279",
     "address": {
       "@type": "PostalAddress",
@@ -1138,12 +1166,12 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://stacklabs.in/#website",
-    "url": "https://stacklabs.in",
-    "name": "StackLabs — Website Developer India",
+    "@id": "https://www.scalvitech.in/#website",
+    "url": "https://www.scalvitech.in",
+    "name": "ScalviTech — Website Developer India",
     "description": "Professional website developer in India. Custom websites, full-stack web apps, admin dashboards starting at ₹10,000.",
     "publisher": {
-      "@id": "https://stacklabs.in/#organization"
+      "@id": "https://www.scalvitech.in/#organization"
     },
     "inLanguage": "en-IN"
   }
@@ -1154,14 +1182,14 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://stacklabs.in/#service",
-    "name": "StackLabs",
-    "alternateName": "StackLabs Web Development",
-    "url": "https://stacklabs.in",
-    "image": "https://stacklabs.in/public/logo.png",
-    "description": "StackLabs is a professional website developer and web development company in India specializing in custom websites, full-stack web applications, admin dashboards, CRM systems, booking platforms, and e-commerce solutions.",
+    "@id": "https://www.scalvitech.in/#service",
+    "name": "ScalviTech",
+    "alternateName": "ScalviTech Web Development",
+    "url": "https://www.scalvitech.in",
+    "image": "https://www.scalvitech.in/public/logo.png",
+    "description": "ScalviTech is a professional website developer and web development company in India specializing in custom websites, full-stack web applications, admin dashboards, CRM systems, booking platforms, and e-commerce solutions.",
     "telephone": "+918777656279",
-    "email": "stacklabsofficial@gmail.com",
+    "email": "contact@scalvitech.in",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "IN"
@@ -1268,7 +1296,7 @@
         "name": "How much does a website cost in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At StackLabs, website development costs start at ₹10,000 for a professional business website. Our Growth package (website + database + admin panel) ranges from ₹25,000 to ₹50,000, and Enterprise web applications start from ₹70,000. All prices are fixed and transparent with no hidden costs."
+          "text": "At ScalviTech, website development costs start at ₹10,000 for a professional business website. Our Growth package (website + database + admin panel) ranges from ₹25,000 to ₹50,000, and Enterprise web applications start from ₹70,000. All prices are fixed and transparent with no hidden costs."
         }
       },
       {
@@ -1276,7 +1304,7 @@
         "name": "How long does it take to build a website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StackLabs delivers websites in 7 to 30 days depending on complexity. A simple business website takes 7–10 days. A full-stack web application with database and admin dashboard typically takes 15–30 days."
+          "text": "ScalviTech delivers websites in 7 to 30 days depending on complexity. A simple business website takes 7–10 days. A full-stack web application with database and admin dashboard typically takes 15–30 days."
         }
       },
       {
@@ -1308,7 +1336,7 @@
         "name": "Do you provide website maintenance after delivery?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, StackLabs offers monthly maintenance plans starting at ₹2,000/month covering backups, security monitoring, minor edits, and uptime monitoring. Our Standard plan (₹5,000–₹8,000/month) includes content updates, bug fixes, and priority support."
+          "text": "Yes, ScalviTech offers monthly maintenance plans starting at ₹2,000/month covering backups, security monitoring, minor edits, and uptime monitoring. Our Standard plan (₹5,000–₹8,000/month) includes content updates, bug fixes, and priority support."
         }
       },
       {
@@ -1316,7 +1344,7 @@
         "name": "Are you the best website developer in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StackLabs is a highly experienced full-stack web development team in India with 4+ years of experience, 50+ projects delivered, and a 98% client satisfaction rate. We bring a product mindset to every project, ensuring your website becomes a 24/7 lead-generating business engine."
+          "text": "ScalviTech is a highly experienced full-stack web development team in India with 4+ years of experience, 50+ projects delivered, and a 98% client satisfaction rate. We bring a product mindset to every project, ensuring your website becomes a 24/7 lead-generating business engine."
         }
       }
     ]
@@ -1333,31 +1361,31 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://stacklabs.in/"
+        "item": "https://www.scalvitech.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://stacklabs.in/#services"
+        "item": "https://www.scalvitech.in/#services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Packages",
-        "item": "https://stacklabs.in/#packages"
+        "item": "https://www.scalvitech.in/#packages"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Projects",
-        "item": "https://stacklabs.in/#projects"
+        "item": "https://www.scalvitech.in/#projects"
       },
       {
         "@type": "ListItem",
         "position": 5,
         "name": "Contact",
-        "item": "https://stacklabs.in/#contact"
+        "item": "https://www.scalvitech.in/#contact"
       }
     ]
   }
@@ -1368,18 +1396,18 @@
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Software & Web Development Services by StackLabs",
-    "description": "Complete list of software development, website development, web application development, and business application development services offered by StackLabs India.",
+    "name": "Software & Web Development Services by ScalviTech",
+    "description": "Complete list of software development, website development, web application development, and business application development services offered by ScalviTech India.",
     "itemListElement": [
       {
         "@type": "ListItem",
         "position": 1,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-business-website",
+          "@id": "https://www.scalvitech.in/#service-business-website",
           "name": "Business Website Development",
           "description": "Professional custom business website development in India. Mobile-responsive, SEO-optimised, conversion-focused websites for small businesses, clinics, restaurants, agencies, and professionals. Starting at ₹10,000.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "Website Development"
         }
@@ -1389,10 +1417,10 @@
         "position": 2,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-web-app",
+          "@id": "https://www.scalvitech.in/#service-web-app",
           "name": "Web Application Development",
           "description": "Custom web application development in India with user authentication, role management, real-time features, REST APIs, and full-stack React + Node.js architecture for startups and enterprises.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "Web Application Development"
         }
@@ -1402,10 +1430,10 @@
         "position": 3,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-business-app",
+          "@id": "https://www.scalvitech.in/#service-business-app",
           "name": "Business Application Development",
           "description": "Custom business application and software development in India. We build internal business tools, employee portals, HR systems, operations dashboards, and workflow automation software.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "Business Software Development"
         }
@@ -1415,10 +1443,10 @@
         "position": 4,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-admin-dashboard",
+          "@id": "https://www.scalvitech.in/#service-admin-dashboard",
           "name": "Admin Dashboard Development",
           "description": "Custom admin dashboard and control panel development. Manage customers, leads, orders, inventory, and analytics with a powerful role-based admin interface.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "Admin Panel Development"
         }
@@ -1428,10 +1456,10 @@
         "position": 5,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-crm",
+          "@id": "https://www.scalvitech.in/#service-crm",
           "name": "CRM & Lead Management Software Development",
           "description": "Custom CRM software development in India. Track leads, manage follow-ups, automate email alerts, and build a full sales pipeline for your business.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "CRM Software Development"
         }
@@ -1441,10 +1469,10 @@
         "position": 6,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-booking",
+          "@id": "https://www.scalvitech.in/#service-booking",
           "name": "Booking & Appointment System Development",
           "description": "Online booking and appointment scheduling software development. Automate appointment confirmations, calendar management, and client reminders for clinics, salons, and service businesses.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "Booking Software Development"
         }
@@ -1454,10 +1482,10 @@
         "position": 7,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-ecommerce",
+          "@id": "https://www.scalvitech.in/#service-ecommerce",
           "name": "E-Commerce & Online Store Development",
           "description": "Custom e-commerce website and online store development with product management, cart, Razorpay/Stripe payment gateway integration, and automated invoicing.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "E-Commerce Development"
         }
@@ -1467,10 +1495,10 @@
         "position": 8,
         "item": {
           "@type": "Service",
-          "@id": "https://stacklabs.in/#service-saas",
+          "@id": "https://www.scalvitech.in/#service-saas",
           "name": "SaaS & MVP Web Application Development",
           "description": "SaaS product and MVP development for startups in India. We build scalable, multi-tenant web applications with subscription management, user onboarding, and analytics.",
-          "provider": {"@id": "https://stacklabs.in/#organization"},
+          "provider": {"@id": "https://www.scalvitech.in/#organization"},
           "areaServed": {"@type": "Country", "name": "India"},
           "serviceType": "SaaS Development"
         }
@@ -1484,8 +1512,8 @@
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "How StackLabs Builds Your Website or Web Application",
-    "description": "StackLabs follows a proven 10-step process to deliver custom websites, web applications, and business software on time and on budget.",
+    "name": "How ScalviTech Builds Your Website or Web Application",
+    "description": "ScalviTech follows a proven 10-step process to deliver custom websites, web applications, and business software on time and on budget.",
     "totalTime": "P30D",
     "estimatedCost": {
       "@type": "MonetaryAmount",
@@ -1516,8 +1544,8 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
     "url": "https://www.trackexp.in",
-    "description": "Comprehensive expense tracking web application with budget management, spending insights, and secure multi-device access. Built with React, Node.js, and PostgreSQL by StackLabs.",
-    "author": {"@id": "https://stacklabs.in/#organization"},
+    "description": "Comprehensive expense tracking web application with budget management, spending insights, and secure multi-device access. Built with React, Node.js, and PostgreSQL by ScalviTech.",
+    "author": {"@id": "https://www.scalvitech.in/#organization"},
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
   }
   </script>
@@ -1530,8 +1558,8 @@
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "Web",
     "url": "https://nextedgeai.in",
-    "description": "Generative AI web application for creating professional video commercials and cinematic content from text prompts. Built with Python, FFmpeg, and AI APIs by StackLabs.",
-    "author": {"@id": "https://stacklabs.in/#organization"},
+    "description": "Generative AI web application for creating professional video commercials and cinematic content from text prompts. Built with Python, FFmpeg, and AI APIs by ScalviTech.",
+    "author": {"@id": "https://www.scalvitech.in/#organization"},
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}
   }
   </script>
@@ -1544,8 +1572,8 @@
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
     "url": "https://anuranan-institute.in",
-    "description": "Full-featured web application for a cultural institute with event management, registrations, gallery, and complete admin control panel. Built with React, Node.js, and MySQL by StackLabs.",
-    "author": {"@id": "https://stacklabs.in/#organization"}
+    "description": "Full-featured web application for a cultural institute with event management, registrations, gallery, and complete admin control panel. Built with React, Node.js, and MySQL by ScalviTech.",
+    "author": {"@id": "https://www.scalvitech.in/#organization"}
   }
   </script>
 
@@ -1560,7 +1588,7 @@
         "name": "What is the cost of software development in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Software development cost in India depends on complexity. At StackLabs, a basic business web application starts at ₹25,000. A mid-tier software solution with database, admin panel, and user management ranges from ₹25,000–₹70,000. Enterprise-grade business applications start from ₹70,000 upwards. India offers world-class software development at a fraction of Western pricing."
+          "text": "Software development cost in India depends on complexity. At ScalviTech, a basic business web application starts at ₹25,000. A mid-tier software solution with database, admin panel, and user management ranges from ₹25,000–₹70,000. Enterprise-grade business applications start from ₹70,000 upwards. India offers world-class software development at a fraction of Western pricing."
         }
       },
       {
@@ -1568,7 +1596,7 @@
         "name": "Can you build custom business software for my company?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. StackLabs specialises in custom business application development tailored to your exact operations. We build employee management systems, CRM software, booking platforms, inventory management tools, operations dashboards, HR portals, and workflow automation software — all built from scratch for your specific business requirements."
+          "text": "Yes. ScalviTech specialises in custom business application development tailored to your exact operations. We build employee management systems, CRM software, booking platforms, inventory management tools, operations dashboards, HR portals, and workflow automation software — all built from scratch for your specific business requirements."
         }
       },
       {
@@ -1576,7 +1604,7 @@
         "name": "What is the difference between a website and a web application?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A website is primarily informational — it displays content to visitors (e.g., a company website, portfolio, or landing page). A web application is interactive software that runs in a browser — it processes data, has user logins, databases, and dynamic functionality (e.g., a CRM, booking system, or admin dashboard). StackLabs builds both."
+          "text": "A website is primarily informational — it displays content to visitors (e.g., a company website, portfolio, or landing page). A web application is interactive software that runs in a browser — it processes data, has user logins, databases, and dynamic functionality (e.g., a CRM, booking system, or admin dashboard). ScalviTech builds both."
         }
       },
       {
@@ -1584,7 +1612,7 @@
         "name": "Do you build SaaS (Software as a Service) applications?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. StackLabs builds SaaS web applications and MVPs for startups. We handle multi-tenant architecture, subscription and billing integration, user onboarding flows, usage analytics dashboards, and API-first backends designed to scale."
+          "text": "Yes. ScalviTech builds SaaS web applications and MVPs for startups. We handle multi-tenant architecture, subscription and billing integration, user onboarding flows, usage analytics dashboards, and API-first backends designed to scale."
         }
       },
       {
@@ -1592,7 +1620,7 @@
         "name": "Can you build an MVP (Minimum Viable Product) for my startup?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. StackLabs is experienced in building MVPs for startups quickly and cost-effectively. We help founders validate their idea with a functional web application that includes core features, user authentication, and a database — ready for real users and investor demos."
+          "text": "Absolutely. ScalviTech is experienced in building MVPs for startups quickly and cost-effectively. We help founders validate their idea with a functional web application that includes core features, user authentication, and a database — ready for real users and investor demos."
         }
       },
       {
@@ -1600,7 +1628,7 @@
         "name": "What backend technologies do you use for web applications?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StackLabs uses Node.js and Express.js for REST API development, PostgreSQL and MongoDB for databases, Redis for caching, Docker for containerisation, and AWS or VPS for cloud deployment. For frontend, we use React and Next.js with TypeScript."
+          "text": "ScalviTech uses Node.js and Express.js for REST API development, PostgreSQL and MongoDB for databases, Redis for caching, Docker for containerisation, and AWS or VPS for cloud deployment. For frontend, we use React and Next.js with TypeScript."
         }
       },
       {
@@ -1624,7 +1652,7 @@
         "name": "Can you build an online booking system for my business?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. StackLabs builds fully custom online booking and appointment systems for clinics, salons, fitness centres, consultants, and service businesses. Features include calendar management, auto-confirmation emails/SMS, slot availability, client reminders, and an admin panel to manage all bookings."
+          "text": "Yes. ScalviTech builds fully custom online booking and appointment systems for clinics, salons, fitness centres, consultants, and service businesses. Features include calendar management, auto-confirmation emails/SMS, slot availability, client reminders, and an admin panel to manage all bookings."
         }
       },
       {
@@ -1632,7 +1660,7 @@
         "name": "Are you a software development company or a freelancer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "StackLabs is a full-stack software and web development agency in India with a dedicated senior development team. Unlike solo freelancers, we have specialists for UI/UX design, frontend development, backend engineering, and database architecture — ensuring professional delivery on every project."
+          "text": "ScalviTech is a full-stack software and web development agency in India with a dedicated senior development team. Unlike solo freelancers, we have specialists for UI/UX design, frontend development, backend engineering, and database architecture — ensuring professional delivery on every project."
         }
       },
       {
@@ -1640,15 +1668,15 @@
         "name": "Do you build e-commerce websites with payment gateway integration?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. StackLabs builds custom e-commerce websites with full product management, shopping cart, order tracking, and payment gateway integration using Razorpay and Stripe. We also include automated invoice generation and order notification systems."
+          "text": "Yes. ScalviTech builds custom e-commerce websites with full product management, shopping cart, order tracking, and payment gateway integration using Razorpay and Stripe. We also include automated invoice generation and order notification systems."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I hire StackLabs for software or website development?",
+        "name": "How do I hire ScalviTech for software or website development?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Getting started with StackLabs is simple. Fill out the contact form on our website at stacklabs.in, send us a WhatsApp message at +91 87776 56279, or email us at stacklabsofficial@gmail.com. We respond within 24 hours with a detailed proposal and pricing tailored to your project."
+          "text": "Getting started with ScalviTech is simple. Fill out the contact form on our website at www.scalvitech.in, send us a WhatsApp message at +91 87776 56279, or email us at contact@scalvitech.in. We respond within 24 hours with a detailed proposal and pricing tailored to your project."
         }
       }
     ]
@@ -1660,12 +1688,12 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "@id": "https://stacklabs.in/#founder",
+    "@id": "https://www.scalvitech.in/#founder",
     "name": "Arindam Gupta",
     "url": "https://arindamgupta.in",
     "sameAs": ["https://www.linkedin.com/in/arindam-gupta-462240125/"],
     "jobTitle": "Founder & Full-Stack Developer",
-    "worksFor": {"@id": "https://stacklabs.in/#organization"},
+    "worksFor": {"@id": "https://www.scalvitech.in/#organization"},
     "knowsAbout": [
       "Web Development", "Software Development", "React", "Node.js",
       "Full Stack Development", "Web Application Development",
@@ -1677,7 +1705,7 @@
 
   <!-- Hidden semantic keyword block (screen-reader accessible, invisible to eyes) -->
   <div aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-    StackLabs is a professional software development company and website developer in India.
+    ScalviTech is a professional software development company and website developer in India.
     We offer custom website development, web application development, business application development,
     software development services, SaaS application development, MVP development for startups,
     admin dashboard development, CRM software development, booking system development,

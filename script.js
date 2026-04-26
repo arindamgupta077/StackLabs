@@ -1,5 +1,5 @@
 /* ==========================================================
-   STACKLABS – script.js
+   SCALVITECH – script.js
    Handles: cursor, nav, hero canvas, reveal animations,
             counter, skill bars, smooth scroll, mobile menu,
             service card glow, form submit
@@ -773,6 +773,6 @@
   /* ──────────────────────────────────────────
      INIT COMPLETE LOG
   ────────────────────────────────────────── */
-  console.log('%cStackLabs ⚡ Loaded', 'color:#7c5cfc;font-size:14px;font-weight:700;');
+  console.log('%cScalviTech ⚡ Loaded', 'color:#7c5cfc;font-size:14px;font-weight:700;');
 
 })();

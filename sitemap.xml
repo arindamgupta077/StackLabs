@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://stacklabs.in/</loc>
+    <loc>https://www.scalvitech.in/</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,42 +14,42 @@
 
   <!-- Sections as anchor URLs (helps Google understand page sections) -->
   <url>
-    <loc>https://stacklabs.in/#about</loc>
+    <loc>https://www.scalvitech.in/#about</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stacklabs.in/#services</loc>
+    <loc>https://www.scalvitech.in/#services</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://stacklabs.in/#packages</loc>
+    <loc>https://www.scalvitech.in/#packages</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://stacklabs.in/#projects</loc>
+    <loc>https://www.scalvitech.in/#projects</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://stacklabs.in/#process</loc>
+    <loc>https://www.scalvitech.in/#process</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://stacklabs.in/#contact</loc>
+    <loc>https://www.scalvitech.in/#contact</loc>
     <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
