@@ -107,6 +107,7 @@
         <li><a href="#packages" class="nav-link">Packages</a></li>
         <li><a href="#faq" class="nav-link">FAQ</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
         <li><a href="#" class="nav-link nav-cta" data-modal="contact">Let's Build →</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
@@ -972,11 +973,15 @@
   <!-- ========== CONTACT ========== -->
   <section class="contact" id="contact">
     <div class="section-container contact-container">
-      <div class="contact-info reveal-left">
+      <div class="contact-intro reveal-up">
         <div class="section-tag">Get In Touch</div>
         <h2 class="section-title">Let's Build <span class="text-gradient">Something Great.</span></h2>
         <p class="contact-desc">Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.</p>
-        <div class="contact-items">
+      </div>
+
+      <div class="contact-layout">
+        <aside class="contact-info reveal-right" aria-label="Contact details">
+          <div class="contact-items">
           <a href="https://wa.me/918777656279" class="contact-item" target="_blank" rel="noopener noreferrer">
             <div class="ci-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
@@ -989,16 +994,33 @@
             </div>
             <div><div class="ci-label">Email</div><div class="ci-value">contact@scalvitech.in</div></div>
           </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Kolkata%2C%20Pune%20and%20Bangalore%2C%20India" class="contact-item" target="_blank" rel="noopener noreferrer">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-label">Location</div>
+              <div class="ci-value location-cities" aria-label="Kolkata, Pune and Bangalore">
+                <span>Kolkata</span>
+                <span>Pune</span>
+                <span>Bangalore</span>
+              </div>
+            </div>
+          </a>
           <div class="contact-item">
             <div class="ci-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
             </div>
             <div><div class="ci-label">Response Time</div><div class="ci-value">Within 24 hours</div></div>
           </div>
-        </div>
-      </div>
+          </div>
+          <div class="contact-map">
+            <iframe src="https://www.google.com/maps?q=Kolkata%2C%20Pune%20and%20Bangalore%2C%20India&amp;output=embed" title="ScalviTech locations in Kolkata, Pune and Bangalore on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Kolkata%2C%20Pune%20and%20Bangalore%2C%20India" class="contact-map-link" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+        </aside>
 
-      <form class="contact-form reveal-right" id="contactForm" novalidate>
+        <form class="contact-form reveal-left" id="contactForm" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label for="fname">Your Name *</label>
@@ -1043,7 +1065,8 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           Message sent! We'll be in touch within 24 hours.
         </div>
-      </form>
+        </form>
+      </div>
     </div>
   </section>
 
