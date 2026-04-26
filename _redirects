@@ -1,5 +1,5 @@
-# Redirect /index.html to root (clean URL)
-/index.html  /  301
+# Consolidate all ranking signals on the apex domain
+https://www.scalvitech.in/*  https://scalvitech.in/:splat  301!
 
-# Catch-all 404 fallback → serves the main page
-/*  /index.html  200
+# Redirect /index.html to root (clean URL)
+/index.html  /  301!

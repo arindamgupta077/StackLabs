@@ -26,7 +26,14 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-# Pretty URLs — serve index.html for / without .html extension
+# Consolidate all ranking signals on the apex domain
+[[redirects]]
+  from = "https://www.scalvitech.in/*"
+  to = "https://scalvitech.in/:splat"
+  status = 301
+  force = true
+
+# Pretty URLs - redirect /index to root
 [[redirects]]
   from = "/index"
   to = "/"

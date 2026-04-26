@@ -800,7 +800,7 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   gap: 24px;
 }
 .service-card {
-  padding: 36px 28px;
+  padding: 24px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -837,21 +837,27 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   transform: translateY(-8px);
   box-shadow: 0 24px 64px rgba(0,0,0,0.38), 0 0 0 1px rgba(124,92,252,0.12);
 }
-.service-card h3, .service-card p, .service-card .service-icon-wrap, .service-card .service-tags { position: relative; z-index: 1; }
-.service-icon-wrap {
-  width: 52px; height: 52px;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(124,92,252,0.1);
-  border: 1px solid rgba(124,92,252,0.2);
+.service-card h3, .service-card p, .service-card .service-photo-wrap, .service-card .service-tags { position: relative; z-index: 1; }
+.service-photo-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
-  margin-bottom: 20px;
-  transition: background 0.3s, border-color 0.3s;
+  margin-bottom: 22px;
 }
-.service-card:hover .service-icon-wrap {
-  background: rgba(124,92,252,0.18);
-  border-color: rgba(124,92,252,0.4);
+.service-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease-out), filter 0.35s;
 }
-.service-icon-wrap svg { width: 24px; height: 24px; color: var(--purple-2); }
+.service-card:hover .service-photo {
+  transform: scale(1.05);
+  filter: saturate(1.08);
+}
 .service-card h3 {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.15rem;
@@ -1694,6 +1700,43 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   font-weight: 700;
 }
 
+/* ---------- SEO FAQ ---------- */
+.seo-faq {
+  padding: 140px 0;
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(13,13,24,0.92) 48%, var(--bg) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.faq-item {
+  padding: 28px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s, transform 0.3s var(--ease-out), background 0.3s;
+}
+.faq-item:hover {
+  border-color: rgba(124,92,252,0.32);
+  background: rgba(124,92,252,0.045);
+  transform: translateY(-3px);
+}
+.faq-item h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  color: var(--text-1);
+  margin-bottom: 12px;
+}
+.faq-item p {
+  font-size: .94rem;
+  line-height: 1.75;
+  color: var(--text-2);
+}
+
 /* ---------- CTA SECTION ---------- */
 .cta-section {
   padding: 160px 24px;
@@ -2133,6 +2176,7 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
   .testi-grid     { grid-template-columns: 1fr; }
   .maint-grid     { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
   .maint-featured { transform: translateY(0); }
+  .faq-grid       { grid-template-columns: 1fr; }
 
   .projects-grid  { grid-template-columns: 1fr; }
   .footer-links   { grid-template-columns: repeat(2, 1fr); }
@@ -2147,7 +2191,7 @@ a, button, [role="button"] { -webkit-tap-highlight-color: transparent; touch-act
 
   /* Reduce section vertical padding on mobile */
   .about, .services, .process, .packages,
-  .projects, .clients, .testimonials, .maintenance, .contact { padding: 80px 0; }
+  .projects, .clients, .testimonials, .maintenance, .seo-faq, .contact { padding: 80px 0; }
   .cta-section { padding: 80px 24px; }
   .section-header { margin-bottom: 48px; }
   .stats { padding: 48px 0; }
