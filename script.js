@@ -8,6 +8,114 @@
 (function () {
   'use strict';
 
+  // Add new portfolio work here. The homepage shows the first six; projects.html shows all.
+  const PROJECTS = [
+    {
+      title: 'TrackExp - Personal Finance Manager',
+      image: '/public/TrackExp.png',
+      alt: 'TrackExp - Personal Finance Manager',
+      url: 'https://www.trackexp.in',
+      tags: ['React', 'Node.js', 'PostgreSQL'],
+      description: 'Comprehensive expense tracking app with budget management, spending insights, and secure multi-device access. Helps users take full control of their finances.'
+    },
+    {
+      title: 'NextEdgeAI - AI Video Creator',
+      image: '/public/NextEdgeAi.png',
+      alt: 'NextEdgeAI - AI Video Creator',
+      url: 'https://nextedgeai.in',
+      tags: ['Gen AI', 'Python', 'FFmpeg'],
+      description: 'Generative AI platform for creating professional video commercials and cinematic content. Turn a text prompt into a full video production in minutes.'
+    },
+    {
+      title: 'Anuranan - Bengali Cultural Institute',
+      image: '/public/Anuranan.png',
+      alt: 'Anuranan - Bengali Cultural Institute',
+      url: 'https://anuranan-institute.in',
+      tags: ['React', 'Admin Panel', 'MySQL'],
+      description: 'Full-featured web application for a Bengali cultural institute with event management, registrations, gallery, and a complete admin control panel.'
+    },
+    {
+      title: 'Employee Portal - Anuranan Institute',
+      image: '/public/EmployePortal.png',
+      alt: 'Employee Portal - Anuranan Institute',
+      url: 'https://anuranan-emp-portal.netlify.app/',
+      tags: ['React', 'Node.js', 'HR Portal'],
+      description: 'A dedicated employee portal for Anuranan Institute enabling staff to manage attendance, leaves, payroll, and internal communications from a single dashboard.'
+    },
+    {
+      title: 'Personal Portfolio - Oracle DBA',
+      image: '/public/Protfolio.png',
+      alt: 'Personal Portfolio - Oracle DBA',
+      url: 'https://arindamgupta.in',
+      tags: ['Portfolio', 'HTML/CSS', 'JavaScript'],
+      description: 'A sleek and professional personal portfolio website for an Oracle DBA, showcasing skills, certifications, work experience, and projects in an elegant interface.'
+    },
+    {
+      title: 'RAG auto mail reply AI Agent',
+      image: '/public/RAG_auto_reply.png',
+      alt: 'RAG auto mail reply AI Agent',
+      url: 'https://easydraft.netlify.app/',
+      tags: ['RAG', 'Email Automation', 'AI Agent'],
+      description: 'Users upload documents in a portal; the AI agent auto-drafts replies to incoming emails based on the uploaded documents.'
+    },
+    {
+      title: 'Whatsapp chatbot for sales analytics',
+      image: '/public/sales_bot.png',
+      alt: 'Whatsapp chatbot for sales analytics',
+      tags: ['WhatsApp', 'Analytics', 'PostgreSQL', 'Forecasting'],
+      description: "AI agent analyses production sales data from PostgreSQL and communicates with the business owner over WhatsApp, answering analytical queries and predicting future sales from past trends."
+    }
+  ];
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function renderProjectCard(project, index) {
+    const delay = Math.min(index, 5) * 150;
+    const tags = (project.tags || []).map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+    const overlay = project.url ? `<div class="project-overlay"><a href="${escapeHtml(project.url)}" target="_blank" rel="noopener noreferrer" class="proj-link-btn">Visit Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>` : '';
+
+    return `
+        <div class="project-card reveal-up" style="--d:${delay}ms">
+          <div class="project-visual">
+            <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.alt)}" class="project-img" loading="lazy" decoding="async">
+            ${overlay}
+          </div>
+          <div class="project-info">
+            <div class="proj-tags">${tags}</div>
+            <h3>${escapeHtml(project.title)}</h3>
+            <p>${escapeHtml(project.description)}</p>
+          </div>
+        </div>`;
+  }
+
+  function renderProjectGrids() {
+    document.querySelectorAll('[data-project-grid]').forEach(grid => {
+      const mode = grid.dataset.projectGrid || 'all';
+      const limit = Number(grid.dataset.projectLimit) || PROJECTS.length;
+      const projects = mode === 'featured' ? PROJECTS.slice(0, limit) : PROJECTS;
+
+      grid.innerHTML = projects.map(renderProjectCard).join('');
+
+      const action = document.querySelector(`[data-projects-action="${mode}"]`);
+      if (action) {
+        action.hidden = !(mode === 'featured' && PROJECTS.length > limit);
+      }
+    });
+
+    document.querySelectorAll('[data-project-count]').forEach(el => {
+      el.textContent = PROJECTS.length;
+    });
+  }
+
+  renderProjectGrids();
+
   /* Mobile detection — used across multiple sections */
   const isMobileDevice = window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 768;
 
@@ -272,7 +380,9 @@
   ────────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
       const navH   = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
@@ -286,6 +396,7 @@
      5. HERO CANVAS – PARTICLE NETWORK
   ────────────────────────────────────────── */
   const canvas = document.getElementById('heroCanvas');
+  if (canvas) {
   const ctx    = canvas.getContext('2d');
 
   let W, H, particles = [], animId;
@@ -422,6 +533,7 @@
   }
   cancelAnimationFrame(animId);
   loopCanvasFull();
+  }
 
 
   /* ──────────────────────────────────────────

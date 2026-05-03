@@ -717,7 +717,7 @@
         <p class="section-subtitle">A selection of recent projects spanning business websites, web applications, and custom dashboards.</p>
       </div>
 
-      <div class="projects-grid">
+      <div class="projects-grid" data-project-grid="featured" data-project-limit="6">
         <!-- Project 1: TrackExp -->
         <div class="project-card reveal-up" style="--d:0ms">
           <div class="project-visual">
@@ -793,20 +793,38 @@
           </div>
         </div>
 
-        <!-- Project 6: YourGPT -->
+        <!-- Project 6: RAG auto mail reply AI Agent -->
         <div class="project-card reveal-up" style="--d:750ms">
           <div class="project-visual">
-            <img src="/public/YourGPT.png" alt="YourGPT — AI Chatbot Application" class="project-img" loading="lazy" decoding="async">
+            <img src="/public/RAG_auto_reply.png" alt="RAG auto mail reply AI Agent" class="project-img" loading="lazy" decoding="async">
             <div class="project-overlay">
-              <a href="https://yourgpt.onrender.com/" target="_blank" rel="noopener noreferrer" class="proj-link-btn">Visit Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="https://easydraft.netlify.app/" target="_blank" rel="noopener noreferrer" class="proj-link-btn">Visit Site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
             </div>
           </div>
           <div class="project-info">
-            <div class="proj-tags"><span>AI</span><span>Python</span><span>PostgreSQL</span></div>
-            <h3>YourGPT — AI Chatbot Application</h3>
-            <p>A powerful AI chatbot application with persistent conversation history backed by PostgreSQL. Delivers intelligent, context-aware responses with a clean conversational interface.</p>
+            <div class="proj-tags"><span>RAG</span><span>Email Automation</span><span>AI Agent</span></div>
+            <h3>RAG auto mail reply AI Agent</h3>
+            <p>Users upload documents in a portal; the AI agent auto-drafts replies to incoming emails based on the uploaded documents.</p>
           </div>
         </div>
+
+        <!-- Project 7: Whatsapp chatbot for sales analytics -->
+        <div class="project-card reveal-up" style="--d:900ms">
+          <div class="project-visual">
+            <img src="/public/sales_bot.png" alt="Whatsapp chatbot for sales analytics" class="project-img" loading="lazy" decoding="async">
+          </div>
+          <div class="project-info">
+            <div class="proj-tags"><span>WhatsApp</span><span>Analytics</span><span>PostgreSQL</span></div>
+            <h3>Whatsapp chatbot for sales analytics</h3>
+            <p>AI agent analyses production sales data from PostgreSQL and communicates with the business owner over WhatsApp, answering analytical queries and predicting future sales from past trends.</p>
+          </div>
+        </div>
+      </div>
+      <div class="projects-actions" data-projects-action="featured" hidden>
+        <a href="projects.html" class="btn btn-primary">
+          Show All Projects
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
